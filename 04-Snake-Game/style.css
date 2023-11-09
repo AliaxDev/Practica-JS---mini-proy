@@ -1,10 +1,8 @@
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: monospace;
-  font-size: 1.2rem;
 }
 
 body {
@@ -16,74 +14,111 @@ body {
 }
 
 .wrapper {
-  width: 65vmin;
-  height: 70vmin;
+  width: 81vmin;
+  height: 90vmin;
+  padding: 15px;
   display: flex;
   overflow: hidden;
   flex-direction: column;
   justify-content: center;
   border-radius: 5px;
-  background: #293447;
+  background: #2c2c2c;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
+
 .game-details {
-  color: #3f444d;
+  color: #ffffff;
   font-weight: 500;
-  font-size: 1.2rem;
+  font-size: 1.8rem;
   padding: 20px 27px;
   display: flex;
   justify-content: space-between;
 }
+
 .play-board {
   height: 100%;
   width: 100%;
   display: grid;
   background: #2c2c2c;
-  border: 1px double #fff;
+  border: 5px solid #ffffff;
   grid-template: repeat(30, 1fr) / repeat(30, 1fr);
-
-
 }
+
 .play-board .food {
-  background: #ffffff;
+  min-width: 5px;
+  min-height: 5px;
   width: 60%;
   height: 60%;
-  border-radius: 50%;
   align-self: center;
   justify-self: center;
+  background: #ffffff;
+  border-radius: 50%;
 }
+
 .play-board .head {
+  min-width: 5px;
+  min-height: 5px;
+  width: 90%;
+  height: 90%;
+  align-self: center;
+  justify-self: center;
   background: #ffffff;
   margin: 1.5px;
 }
 
-
 .controls {
   display: none;
   justify-content: space-between;
+  border: 2px solid #fff;
 }
+
 .controls i {
   padding: 25px 0;
   text-align: center;
   font-size: 1.3rem;
-  color: #3f444d;
+  color: #ffffff;
   width: calc(100% / 4);
   cursor: pointer;
-  border-right: 1px solid #171B26;
+  border-right: 1px solid #fff;
+  border-left: 1px solid #fff;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 640px) {
   .wrapper {
     width: 90vmin;
     height: 115vmin;
   }
+
   .game-details {
     font-size: 1rem;
     padding: 15px 27px;
   }
+
   .controls {
     display: flex;
   }
+
+  .controls i {
+    padding: 15px 0;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .wrapper {
+    width: 90vmin;
+    height: 115vmin;
+  }
+
+  .game-details {
+    font-size: 1rem;
+    padding: 15px 27px;
+  }
+
+  .controls {
+    display: flex;
+  }
+
   .controls i {
     padding: 15px 0;
     font-size: 1rem;
